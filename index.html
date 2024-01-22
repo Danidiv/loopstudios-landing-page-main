@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- styles css link -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Loopstudios landing page</title>
+  </head>
+  <body>
+    <section id="about">
+      <!-- BG Image hero -->
+      <div class="hero-img">
+        <img src="images/desktop/image-hero.jpg" alt="" />
+      </div>
+      <div class="container">
+        <header>
+          <div class="logo">
+            <a href="#"> <img src="images/logo.svg" alt="" /></a>
+          </div>
+          <div class="nav">
+            <ul class="nav-menu">
+              <a href="#about" class="nav-links">About</a>
+              <a href="#Careers" class="nav-links">Careers</a>
+              <a href="#Events" class="nav-links">Events</a>
+              <a href="#Events" class="nav-links">Products</a>
+              <a href="#Support" class="nav-links">Support</a>
+            </ul>
+            <!-- Hamburger -->
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+        </header>
+        <div class="Heading">
+          <div class="container">
+            <p>
+              Immersive <br />
+              experiences <br />
+              that deliver
+            </p>
+          </div>
+        </div>
+        <div id="Careers" class="showcase">
+          <img src="images/desktop/image-interactive.jpg" alt="" />
+          <div class="text-div">
+            <h2>
+              The leader in <br />
+              interactive VR
+            </h2>
+            <p>
+              Founded in 2011, Loopstudios has been producing world-class
+              virtual reality projects for some of the best companies around the
+              globe. Our award-winning creations have transformed businesses
+              through digital experiences that bind to their brand.
+            </p>
+          </div>
+        </div>
+        <!-- See All Page -->
+        <div class="see-page">
+          <button><span>See all</span></button>
+          <h2>Our creations</h2>
+        </div>
+      </div>
+    </section>
+    <!-- Gallery Part -->
+    <div id="Events" class="gallery">
+      <div class="container">
+        <div class="boxs">
+          <div class="box">
+            <h2>deep<br />earth</h2>
+            <img src="images/desktop/image-deep-earth.jpg" alt="" />
+          </div>
+          <div class="box">
+            <h2>night<br />arcade</h2>
+            <img src="images/desktop/image-night-arcade.jpg" alt="" />
+          </div>
+          <div class="box">
+            <h2>soccer<br />team vr</h2>
+            <img src="images/desktop/image-soccer-team.jpg" alt="" />
+          </div>
+          <div class="box">
+            <h2>the<br />grid</h2>
+            <img src="images/desktop/image-grid.jpg" alt="" />
+          </div>
+        </div>
+        <div class="boxs">
+          <div class="box">
+            <h2>form<br />above</h2>
+            <img src="images/desktop/image-from-above.jpg" alt="" />
+          </div>
+          <div class="box">
+            <h2>pocket<br />borealis</h2>
+            <img src="images/desktop/image-pocket-borealis.jpg" alt="" />
+          </div>
+          <div class="box">
+            <h2>the<br />curiosity</h2>
+            <img src="images/desktop/image-curiosity.jpg" alt="" />
+          </div>
+          <div class="box">
+            <h2>make it <br />fisheye</h2>
+            <img src="images/desktop/image-fisheye.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+
+    <footer id="Support">
+      <div class="container">
+        <div class="logo-nav">
+          <a href="#">
+            <img src="images/logo.svg" alt="" />
+          </a>
+          <ul>
+            <a href="#about">About</a>
+            <a href="#Careers">Careers</a>
+            <a href="#Events">Events</a>
+            <a href="#Events">Products</a>
+            <a href="#Support">Support</a>
+          </ul>
+        </div>
+        <!-- Social icon -->
+        <div class="social-icon">
+          <ul>
+            <li>
+              <img src="images/icon-facebook.svg" alt="" class="icon" />
+            </li>
+            <li><img src="images/icon-twitter.svg" alt="" class="icon" /></li>
+            <li>
+              <img src="images/icon-pinterest.svg" alt="" class="icon" />
+            </li>
+            <li>
+              <img src="images/icon-instagram.svg" alt="" class="icon" />
+            </li>
+          </ul>
+          <div class="copyright">© 2021 Loopstudios. All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript add -->
+    <script>
+      // Hamburger
+      let hamburger = document.querySelector(".hamburger");
+      let navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".nav-links").forEach((n) =>
+        n.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+        })
+      );
+    </script>
+  </body>
+</html>
